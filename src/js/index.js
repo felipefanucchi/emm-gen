@@ -1,3 +1,3 @@
-import {log} from './tests'
+import { log } from './tests'
 
-console.log(log)
+console.log(`${log}...`);

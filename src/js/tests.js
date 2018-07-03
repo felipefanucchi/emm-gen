@@ -1,1 +1,3 @@
-export const log = 'Logging';
+import moment from 'moment'
+export const log = 'Logging'
+
