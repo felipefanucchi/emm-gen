@@ -1,0 +1,38 @@
+{
+  "name": "gerador-email-marketing",
+  "version": "0.0.0",
+  "description": "This is a tool to help in emm creating",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp --require babel-register --gulpfile tasks",
+    "build": "NODE_ENV=production gulp build --require babel-register --gulpfile tasks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipefanucchi/emm-gen.git"
+  },
+  "keywords": [
+    "emm",
+    "js",
+    "es6+",
+    "webpack",
+    "tasks",
+    "gulp"
+  ],
+  "author": "Felipe Fanucchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felipefanucchi/emm-gen/issues"
+  },
+  "homepage": "https://github.com/felipefanucchi/emm-gen#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.24.5",
+    "webpack": "^4.14.0",
+    "gulp": "github:gulpjs/gulp#4.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}
