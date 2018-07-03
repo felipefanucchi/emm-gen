@@ -19,7 +19,7 @@ npm install || npm i
 Em seguida
 
 ```
-gulp
+npm run dev
 ```
 
 ### Getting Started
