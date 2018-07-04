@@ -1,14 +1,16 @@
 import gulp from 'gulp'
-import imagemin from 'imagemin'
+import minify from 'gulp-imagemin'
+import newer from 'gulp-newer'
 import config from '../config.json'
 
 const src = config.paths.src;
 const dest = config.paths.dist;
 
-export const images = e =>
+const images = e =>
   gulp
-    .src(`../${src}/images/`)
-    .pipe(imagemin({
+    .src(`${src}images/`, { allowEmpty: true })
+    .pipe(newer(`${dest}images/`))
+    .pipe(minify({
       progressive: true,
       svgoPlugins: [
         { removeViewBox: false },
@@ -16,6 +18,6 @@ export const images = e =>
       ],
       optimizationLevel: 5
     }))
-    .pipe(gulp.dest(`../${dest}/images/`))
+    .pipe(gulp.dest(`dist/images/`))
 
 export default images;
