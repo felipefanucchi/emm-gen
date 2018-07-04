@@ -1,8 +1,5 @@
 import gulp from 'gulp'
-import { scripts } from './webpack'
-import images from './images'
-
-console.log(images);
+import { scripts } from './commom/webpack'
 
 export const dev = gulp.series(scripts)
 
