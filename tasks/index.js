@@ -1,6 +1,7 @@
 import gulp from 'gulp'
-import { scripts } from './commom/webpack'
+import images from './commom/images'
+import webpack from './commom/webpack'
 
-export const dev = gulp.series(scripts)
+const dev = gulp.series(webpack)
 
 export default dev

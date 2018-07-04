@@ -2,9 +2,12 @@ import gulp from 'gulp'
 import imagemin from 'imagemin'
 import config from '../config.json'
 
-export default gulp.task('images', e =>
+const src = config.paths.src;
+const dest = config.paths.dist;
+
+export const images = e =>
   gulp
-    .src(`../${config.paths.src}/images/`)
+    .src(`../${src}/images/`)
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [
@@ -13,5 +16,6 @@ export default gulp.task('images', e =>
       ],
       optimizationLevel: 5
     }))
-    .pipe(gulp.dest(`../${config.paths.dist}/images/))
-);
+    .pipe(gulp.dest(`../${dest}/images/`))
+
+export default images;
