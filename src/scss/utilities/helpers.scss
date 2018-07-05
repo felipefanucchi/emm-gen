@@ -1,0 +1,28 @@
+// helpers in General
+
+// Heading Sizes
+// @each $key,
+// $value in $font-size-headings {
+//     .#{$key} {
+//         font-size: $value !important;
+//     }
+// }
+
+// .no-margin {
+//     margin: 0 !important;
+// }
+
+// // All kind of utilities classes
+// .u{
+//     &-link{
+//         transition: opacity ease .2s;
+//         color:inherit;
+//         &:hover,
+//         &:focus,
+//         &:visited{
+//             opacity: .7;
+//             color:currentColor;
+//             text-decoration:none;
+//         }
+//     }
+// }

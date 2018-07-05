@@ -11,12 +11,12 @@ let webpackConfig = {
   entry: config.entryFiles,
   output: {
     path: path.resolve(__dirname, `../${dest}`),
-    filename: 'bundle.js'
+    filename: 'js/bundle.js'
   },
   context: path.resolve(__dirname, `../${src}/js/`)
 }
 
-const scripts = function() {
+const scripts = () => {
   return new Promise((resolve, reject) => {
     try{
       webpack(webpackConfig, (err, stats) => {

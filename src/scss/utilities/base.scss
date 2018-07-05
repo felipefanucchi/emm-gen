@@ -1,0 +1,26 @@
+@import '../common';
+// Reseting the font-size,
+// Like this you can use REM like that
+// 1rem = 10px
+
+html,
+body{
+    font-size: 62.5%;
+    font-family: $font-family-primary;
+    margin:0;
+    background:$dark;
+    color:$clear;
+    @media screen and (max-width: $screen-xs) {
+        font-size: 70%;
+    }
+}
+
+// Container width
+// Set the container width.
+.container {
+    //@include container-fixed;
+    
+    // @media (min-width: $screen-lg-min) {
+    //     width:$container;
+    // }
+}
