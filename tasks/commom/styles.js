@@ -6,6 +6,8 @@ import autoprefixer from 'autoprefixer'
 import assets from 'postcss-assets'
 import cssnano from 'cssnano'
 import sourcemaps from 'gulp-sourcemaps'
+import path from 'path'
+import gulpif from 'gulp-if'
 
 import config from '../config.json'
 
@@ -44,15 +46,11 @@ if (isProd) {
 
 const styles = () =>
   gulp
-    .src(`../${src}main.scss`, {allowEmpty: true})
-    .pipe(gulpif(
-      !isProd, sourcemaps.init()
-    ))
+    .src(path.resolve('src/scss/main.scss'), {allowEmpty: true})
+    .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass(sassOptions))
     .pipe(postcss(postCssPlugins))
-    .pipe(gulpif(
-      !isProd, sourcemaps.write()
-    ))
-    .pipe(gulp.dest(`${dist}css/`))
+    .pipe(gulpif(!isProd, sourcemaps.write()))
+    .pipe(gulp.dest(path.resolve('dist/css/')))
 
 export default styles

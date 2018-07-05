@@ -3,6 +3,6 @@ import images from './commom/images'
 import webpack from './commom/webpack'
 import styles from './commom/styles'
 
-const dev = gulp.series(styles)
+const dev = gulp.parallel(styles, webpack, images)
 
 export default dev

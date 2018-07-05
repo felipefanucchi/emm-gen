@@ -63,13 +63,10 @@
         background-repeat: no-repeat;
         height: 30px;
         &.facebook {
-            background-image: resolve('facebook.svg');
         }
         &.instagram {
-            background-image: resolve('instagram.svg');
         }
         &.mail {
-            background-image: resolve('mail.svg');
             width: 35px;
         }
         &.facebook,
